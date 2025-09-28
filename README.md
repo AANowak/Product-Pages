@@ -1,56 +1,49 @@
-The Bottle – Reusable Product Page
+# The Bottle – Reusable Product Page  
 
-A responsive, content-rich product landing page built to showcase my front-end design and development abilities.
-This project demonstrates modern UI/UX practices, clean layout design, and interactivity using HTML, CSS, and JavaScript.
+A responsive, content-rich **product landing page** built to showcase my front-end design and development abilities.  
+This project demonstrates modern UI/UX practices, clean layout design, and interactivity using **HTML, CSS, and JavaScript**.   
 
-✨ Features
+---
 
-Hero Section with call-to-action button and animated bottle display
+## 🛠️ Live demo coming soon!
 
-About Section describing mission and brand promise
+---
 
-Process Timeline (6 steps) explaining how eco-friendly bottles are made
+## ✨ Features  
 
-Interactive Gallery with hover overlays and scrollable grid layout
+- **Hero Section** with call-to-action button and animated bottle display  
+- **About Section** describing mission and brand promise  
+- **Process Timeline** (6 steps) explaining how eco-friendly bottles are made  
+- **Interactive Gallery** with hover overlays and scrollable grid layout  
+- **Testimonials** to build trust and credibility  
+- **Buy Section** with “Add to Cart” interaction  
+- **Responsive Design** – optimized for desktop, tablet, and mobile  
 
-Testimonials to build trust and credibility
+---
 
-Buy Section with “Add to Cart” interaction
+### 🔧 Technologies  
+- **HTML5** – semantic structure for accessibility & SEO  
+- **CSS3** – Flexbox, Grid, custom animations, hover effects, responsive design  
+- **JavaScript (Vanilla)** – simple interactivity (Add to Cart button)  
+- **Google Fonts** – Montserrat & Playfair Display for typography  
+- **SVG & Images** – custom graphics and background wave patterns    
 
-Responsive Design – optimized for desktop, tablet, and mobile
+---
 
-🔧 Technologies
+## 📸 Preview  
 
-HTML5 – semantic structure for accessibility & SEO
+![Project Screenshot](Graphics/screenshot.png) 
 
-CSS3 – Flexbox, Grid, custom animations, hover effects, responsive design
+---
 
-JavaScript (Vanilla) – simple interactivity (Add to Cart button)
+## Lessons Learned
 
-Google Fonts – Montserrat & Playfair Display for typography
+Working on this project provided valuable experience in front-end styling and layout techniques. Key takeaways include:
 
-SVG & Images – custom graphics and background wave patterns
+- Improved understanding of CSS grid and flexbox for building responsive and well-structured layouts.  
+- Gained practical experience with box styling, including border-radius, box-shadow, and custom framing techniques.  
+- Learned how to effectively implement CSS animations using `transform` properties to move and scale elements smoothly.  
+- Enhanced skills in using background images and ensuring they integrate seamlessly with responsive designs.  
+- Developed strategies for creating text that scales dynamically with flexible containers, improving readability across devices.  
 
-📸 Preview
-
-<screenshot>
-
-📖 Learning Goals
-
-Practice building a modern landing page from scratch
-
-Gain experience with responsive layouts (Flexbox, CSS Grid, media queries)
-
-Showcase clean, maintainable code in HTML, CSS, and JS
-
-Develop a polished project for a front-end portfolio
-
-🔮 Future Improvements
-
-Add a real shopping cart system
-
-Integrate accessibility enhancements (ARIA labels, focus states)
-
-Expand gallery with filter/sort functionality
-
-Deploy online using GitHub Pages
+These insights have strengthened my ability to design visually appealing and responsive web interfaces.
