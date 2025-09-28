@@ -1,0 +1,263 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background: #F9FAF5;
+  color: #010101;
+}
+
+/* Main Sections style + sections text styling*/
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.hero-text, .about-text, .gallery-text {
+  max-width: 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.hero-text h1, .about-text h2, .process h2, .gallery-text h2, .testimonials h2, .buy h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+}
+
+.hero-text p, .about-text p, .step p, .gallery-text p, .testimonials blockquote, .buy p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  background-image: url('Graphics/wave.svg');
+}
+
+.hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 85%;
+}
+
+/* Custom frames using border images */
+.hero-frame {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border: 10px solid transparent;
+  border-radius: 10% 50% 10% 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0.5,0.5);
+  margin-right: 50px;
+}
+
+/* Images inside frames */
+.hero-frame img {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: moveSide 6s ease-in-out infinite alternate;
+}
+
+.btn-primary {
+  background: #c49e64;
+  color: #010101;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #edbf79;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  background-image: url('Graphics/wave-2.svg');
+  background-repeat: unset;
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.about-box {
+  display: flex;
+  flex-direction: column; /* stack vertically on desktop */
+  gap: 2rem;
+  width: 85%;
+  padding: 3rem;
+  background-color: #edbf7970;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+/* Responsive: two columns on wider screens */
+@media (min-width: 768px) {
+  .about-box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-text {
+    width: 48%;
+  }
+}
+
+/* Process Steps */
+.process .steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.step {
+  flex: 1 1 calc(33.333% - 30px);
+  max-width: calc(33.333% - 30px);
+  padding: 20px;
+  background-color: #edbf7970;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Gallery Section */
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+  max-width: 900px;
+  max-height: 600px; /* visible height */
+  overflow-y: auto; /* vertical scroll */
+  scroll-behavior: smooth;
+  padding-right: 10px;
+}
+
+.photo-1 { grid-area: 1 / 1 / 4 / 3; }
+.photo-2 { grid-area: 1 / 3 / 4 / 4; }
+.photo-3 { grid-area: 1 / 4 / 4 / 5; }
+.photo-4 { grid-area: 9 / 3 / 11 / 5; }
+.photo-5 { grid-area: 4 / 3 / 6 / 5; }
+.photo-6 { grid-area: 6 / 1 / 8 / 3; }
+.photo-7 { grid-area: 6 / 3 / 9 / 5; }
+.photo-8 { grid-area: 4 / 1 / 6 / 2; }
+.photo-9 { grid-area: 4 / 2 / 6 / 3; }
+.photo-10 { grid-area: 8 / 1 / 11 / 3; }
+
+.gallery-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay on hover */
+.gallery-photo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+.gallery-photo:hover .overlay {
+  opacity: 1;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  max-width: 600px;
+  margin: 20px auto;
+  font-style: italic;
+  position: relative;
+  padding-left: 20px;
+}
+
+.testimonials cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #1E3A2F;
+}
+
+/* Buy */
+.buy button {
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/*Animations*/
+
+@keyframes moveSide {
+  0% {
+    transform: translateX(-4%) scale(1.3);
+  }
+  100% {
+    transform: translateX(5%) scale(1.2);
+  }
+}
