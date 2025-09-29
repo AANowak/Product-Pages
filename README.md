@@ -1,4 +1,4 @@
-# The Bottle – Reusable Product Page  
+# The Bottle – Product Page  
 
 A responsive, content-rich **product landing page** built to showcase my front-end design and development abilities.  
 This project demonstrates modern UI/UX practices, clean layout design, and interactivity using **HTML, CSS, and JavaScript**.   
@@ -21,7 +21,7 @@ This project demonstrates modern UI/UX practices, clean layout design, and inter
 
 ---
 
-### 🔧 Technologies  
+## 🔧 Technologies  
 - **HTML5** – semantic structure for accessibility & SEO  
 - **CSS3** – Flexbox, Grid, custom animations, hover effects, responsive design  
 - **JavaScript (Vanilla)** – simple interactivity (Add to Cart button)  
@@ -35,6 +35,10 @@ This project demonstrates modern UI/UX practices, clean layout design, and inter
 ![Project Screenshot](Graphics/screenshot.png) 
 
 ---
+
+## Future Improvements
+
+I will continue working on design and add a few different modules, both static ones and interactive ones. I will also add a more interestic Add to Cart function to make the page feel more alive.
 
 ## Lessons Learned
 
