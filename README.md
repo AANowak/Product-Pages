@@ -3,11 +3,9 @@
 A responsive, content-rich **product landing page** built to showcase my front-end design and development abilities.  
 This project demonstrates modern UI/UX practices, clean layout design, and interactivity using **HTML, CSS, and JavaScript**.   
 
----
 
 ## 🛠️ Live demo coming soon!
 
----
 
 ## ✨ Features  
 
@@ -19,7 +17,6 @@ This project demonstrates modern UI/UX practices, clean layout design, and inter
 - **Buy Section** with “Add to Cart” interaction  
 - **Responsive Design** – optimized for desktop, tablet, and mobile  
 
----
 
 ## 🔧 Technologies  
 - **HTML5** – semantic structure for accessibility & SEO  
@@ -28,13 +25,13 @@ This project demonstrates modern UI/UX practices, clean layout design, and inter
 - **Google Fonts** – Montserrat & Playfair Display for typography  
 - **SVG & Images** – custom graphics and background wave patterns    
 
----
 
 ## 📸 Preview  
 
-![Project Screenshot](Graphics/screenshot.png) 
+![Project Screenshot](Graphics/screenshot-1.png)
+![Project Screenshot](Graphics/screenshot-2.png)
+![Project Screenshot](Graphics/screenshot-3.png) 
 
----
 
 ## Future Improvements
 
