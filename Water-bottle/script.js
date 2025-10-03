@@ -4,10 +4,34 @@ function addToCart() {
   btn.style.background = "#28a745";
   setTimeout(() => {
     btn.textContent = "Add to Cart";
-    btn.style.background = "#4a90e2";
+    btn.style.background = "#c49e64";
   }, 1500);
 }
 document.querySelector('.buy button').addEventListener('click', addToCart);
+
+document.getElementById('addToCartBtn').addEventListener('click', () => {
+  const color = document.getElementById('color').value;
+  const size = document.getElementById('size').value;
+  const quantity = parseInt(document.getElementById('quantity').value);
+
+  if (quantity < 1) {
+    alert("Quantity must be at least 1.");
+    return;
+  }
+
+  // For now, just show message (you can later connect to cart logic)
+  const message = `${quantity} x ${color} (${size}) added to cart!`;
+  const cartMessage = document.getElementById('cartMessage');
+  cartMessage.textContent = message;
+
+  // Optional: animate message
+  cartMessage.style.opacity = 0;
+  cartMessage.style.transition = "opacity 0.5s ease";
+  setTimeout(() => {
+    cartMessage.style.opacity = 1;
+  }, 50);
+});
+
 
 const testimonials = [
   { text: "Eco friendly, clean design, great quality. No more cheap plastic!", author: "Olivia R." },

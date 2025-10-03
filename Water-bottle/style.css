@@ -32,7 +32,7 @@ section {
   padding: clamp(20px, 5%, 60px) 0;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
   position: relative;
 }
@@ -127,7 +127,7 @@ section {
   padding: 3rem;
   background-color: #edbf7970;
   backdrop-filter: blur(20px);
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
@@ -159,7 +159,7 @@ section {
   padding: 20px;
   background-color: #edbf7970;
   backdrop-filter: blur(20px);
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -183,6 +183,8 @@ section {
   grid-template-columns: repeat(auto-fit);
   grid-auto-rows: 200px;
   gap: 10px;
+  min-width: 700px;
+  max-width: 1200px;
   max-height: 600px;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -264,7 +266,6 @@ section {
   justify-content: space-between;
   flex-wrap: wrap; /* stack on smaller screens */
   overflow: hidden;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -274,9 +275,8 @@ section {
   backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 2rem;
+  margin: 10px 0;
   box-shadow: 0 10px 10px rgba(0,0,0,0.15);
-  font-style: italic;
-  font-family: 'Montserrat', sans-serif;
   transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 1;
 }
@@ -287,22 +287,53 @@ section {
   color: #1E3A2F;
 }
 
-/* Responsive stacking */
-@media (max-width: 1024px) {
-  .testimonial-card {
-    flex: 1 1 45%;
-  }
-}
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 1 1 100%;
-  }
-}
-
-
 /* Buy */
-.buy button {
-  margin-top: 15px;
+.buy {
+  background-color: #edbf7970;
+  border-radius: 50px;
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.buy-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 150px;
+}
+
+.option-group label {
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.option-group select,
+.option-group input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.option-group select:focus,
+.option-group input:focus {
+  border-color: #1E3A2F;
+}
+
+#cartMessage {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #1E3A2F;
 }
 
 /* Footer */
@@ -322,5 +353,28 @@ footer {
   }
   100% {
     transform: translateX(5%) scale(1.1);
+  }
+}
+
+/* Responsive stacking */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 1 1 100%;
+  }
+
+  .buy-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-group {
+    width: 100%;
+    max-width: 300px;
   }
 }
