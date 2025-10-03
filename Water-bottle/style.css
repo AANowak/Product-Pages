@@ -27,9 +27,14 @@ p, blockquote {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Unified Section Styles */
 section {
-  padding: clamp(20px, 5%, 60px) 5%;
+  padding: clamp(20px, 5%, 60px) 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
 .hero-text, .about-text, .gallery-text {
@@ -48,12 +53,14 @@ section {
   align-items: center;
   padding: 4rem;
   background-image: url('Graphics/wave.svg');
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-box {
   display: flex;
   width: 100%;
+  max-width: 1200px;
   align-items: center;
   justify-content: center;
   gap: 50px;
@@ -106,18 +113,17 @@ section {
 
 /* About Section */
 .about {
-  background-image: url('Graphics/wave-2.svg');
-  background-repeat: repeat-x;
   display: flex;
   justify-content: center;
+  background-image: url('Graphics/wave-2.svg');
+  background-repeat: repeat-x;
   padding: 4rem;
 }
 
 .about-box {
   display: flex;
-  flex-direction: column; /* stack vertically on desktop */
+  max-width: 1200px;
   gap: 2rem;
-  width: 85%;
   padding: 3rem;
   background-color: #edbf7970;
   backdrop-filter: blur(20px);
@@ -148,8 +154,8 @@ section {
 }
 
 .step {
-  flex: 1 1 calc(33.333% - 30px);
-  max-width: calc(33.333% - 30px);
+  flex: 1 1 calc(30% - 30px);
+  max-width: calc(30% - 30px);
   padding: 20px;
   background-color: #edbf7970;
   backdrop-filter: blur(20px);
@@ -164,20 +170,21 @@ section {
 
 .gallery {
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
   padding: 60px 10%;
   text-align: center;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit);
   grid-auto-rows: 200px;
   gap: 10px;
-  max-width: 900px;
-  max-height: 600px; /* visible height */
-  overflow-y: auto; /* vertical scroll */
+  max-height: 600px;
+  overflow-y: auto;
   scroll-behavior: smooth;
   padding-right: 10px;
 }
@@ -216,7 +223,7 @@ section {
   height: 100%;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(4px);
-  color: white;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,10 +242,11 @@ section {
 }
 
 /* Testimonials */
+
+
 .testimonials blockquote {
   max-width: 600px;
   margin: 20px auto;
-  font-style: italic;
   position: relative;
   padding-left: 20px;
 }
@@ -249,6 +257,48 @@ section {
   font-weight: 600;
   color: #1E3A2F;
 }
+
+.testimonial-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap; /* stack on smaller screens */
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  flex: 1 1 30%;
+  background: #edbf7970;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
+
+.testimonial-card cite {
+  display: block;
+  font-weight: 600;
+  color: #1E3A2F;
+}
+
+/* Responsive stacking */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 1 1 100%;
+  }
+}
+
 
 /* Buy */
 .buy button {
